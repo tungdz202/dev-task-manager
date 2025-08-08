@@ -1,23 +1,57 @@
-export interface Developer {
+export interface DeveloperDev {
     id: number;
     name: string;
+    email: string;
     skills: string[];
-    tasks: number;
     performance: number;
+    tasks: TaskDev[];
 }
 
-export interface Project {
+export interface ProjectPrj {
     id: number;
     name: string;
+    description: string;
+    startDate: string;
+    dueDate: string;
     status: string;
-    tasks: number;
+    progress: number;
+    tasks: TaskPrj[];
 }
 
-export interface Task {
+export interface TaskDev {
     id: number;
     title: string;
+    description: string;
     assignedTo: string;
+    assigner: string;
+    projects: string[];
+    kind: string;
+    startDate: string;
+    dueDate: string;
     status: string;
+    progress: number;
     skills: string[];
     deadline: string;
+}
+
+export interface TaskPrj {
+    id: number;
+    title: string;
+    description: string;
+    assignedTo: string;
+    assigner: string;
+    projects: string[];
+    kind: string;
+    startDate: string;
+    dueDate: string;
+    status: string;
+    progress: number;
+    skills: string[];
+    deadline: string;
+}
+
+export interface DeveloperSuggestion {
+    name: string;
+    skills: string[];
+    reason: string;
 }
